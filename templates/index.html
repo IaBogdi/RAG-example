@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAG PoC Project</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <div class="description text-center mb-4">
+      <h1>Test of the Retrieval Augmented Generation</h1>
+      <p>Upload any document and ask any questions related to the document.</p>
+      <p>LLM: Llama 3.1 Q4, Embedding model: bge-base-en-v1.5.</p>
+    </div>
+    
+    <div class="document-uploader text-center mb-4">
+      <label for="input-file" id="drop-area" class="p-4 border border-primary rounded d-block mx-auto" style="cursor: pointer;">
+        <input type="file" accept=".docx" id="input-file" hidden>
+        <img src="{{ url_for('static', filename='images/upload-icon.png') }}" id="uploader-icon" class="img-fluid mb-2" alt="Upload Icon">
+        <p id="uploader-text">Drag and drop or click here to upload the document (.docx).</p>
+      </label>
+    </div>
+
+    <div class="output text-center">
+      <textarea id="question" class="form-control mb-3" placeholder="Ask your question here" rows="3"></textarea>
+      <button id="submit-btn" class="btn btn-primary mb-3" onclick="submitQuestion()">Submit question</button>
+      <div class="spinner-border text-primary d-none" id="loading-spinner" role="status"></div>
+      <p id="answer" class="d-none">Answer is here.</p>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

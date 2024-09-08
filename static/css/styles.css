@@ -1,0 +1,13 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+.description {
+  font-size: 24px;
+}
+
+#uploader-icon {
+  width: 20%;
+  height: auto;
+  margin-bottom: 20px;
+}

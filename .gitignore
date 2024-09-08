@@ -1,0 +1,5 @@
+.venv
+.venv/*
+.venv/lib/python3.12/site-packages/*
+__pycache__/*
+.vscode/*
