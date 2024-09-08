@@ -11,3 +11,7 @@ Run the server using Gunicorn:
 ```bash
 gunicorn -w 4 -b 0.0.0.0:5002 app:app
 ```
+
+Screenshot from the app:
+
+![image](https://github.com/user-attachments/assets/f94e5f37-0e3e-4de5-807d-6fcc6ce28110)
